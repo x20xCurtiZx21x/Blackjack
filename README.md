@@ -1,0 +1,26 @@
+# Blackjack(21)
+Blackjack is a popular casino game played by many.
+The objective of the game is to draw cards that add up to or as close to 21 without going over 21.
+If you obtain a closer number to 21 than the dealer, you win!
+I recreated this game in Python for Singleplayer mode and easier accessability whenever I don't have playing cards on hand
+
+## Motivation
+I wrote the code in my free time in order to apply skills I am currently developing in my studies.
+
+## How to Run/Play
+- Download an IDE or have some method to run Python files
+- Run blackjack.py in the IDE
+
+## What is Included?
+- Card Dealing System Played Against a Bot
+
+## Future Plans
+- Local Multiplayer
+- Level-Up System(That will transfer progress from Shut the Box)
+- Betting System
+- User Choice on Amount of Decks Used
+
+## Questions?
+If you have an questions, feel free to reach me:
+- curtischase6@gmail.com
+- curtischase6@ku.edu
