@@ -128,7 +128,23 @@ def newSum(cards):
 
     return sum
 
-def main():
+def createDeck(decknum):
+
+    new_deck = []
+    
+    while decknum >= 1:
+
+        for i in deck:
+
+            new_deck.append(i)
+
+        decknum -= 1
+
+    return new_deck
+
+def startGame(userDeck, deckLength):
+
+    print("")
 
     try:
 
@@ -146,47 +162,53 @@ def main():
 
         pcards = []
 
-        numLeft = 51
-
-        temp = ["ACE♠","KING♠","QUEEN♠","JACK♠","2♠","3♠","4♠","5♠","6♠","7♠","8♠","9♠","10♠","ACE♣","KING♣","QUEEN♣","JACK♣","2♣","3♣","4♣","5♣","6♣","7♣","8♣","9♣","10♣","ACE♥","KING♥","QUEEN♥","JACK♥","2♥","3♥","4♥","5♥","6♥","7♥","8♥","9♥","10♥","ACE♦","KING♦","QUEEN♦","JACK♦","2♦","3♦","4♦","5♦","6♦","7♦","8♦","9♦","10♦"]
+        numLeft = deckLength - 1
 
         cardnum = drawCard(numLeft)
 
-        card = temp[cardnum]
+        card = userDeck[cardnum]
 
         pcards.append(card)
 
-        temp.remove(card)
+        userDeck[cardnum] = 0
+
+        userDeck.remove(0)
 
         numLeft -= 1
 
         cardnum = drawCard(numLeft)
 
-        card = temp[cardnum]
+        card = userDeck[cardnum]
 
         dcards.append(card)
 
-        temp.remove(card)
+        userDeck[cardnum] = 0
+
+        userDeck.remove(0)
 
         numLeft -= 1
 
         cardnum = drawCard(numLeft)
 
-        card = temp[cardnum]
+        card = userDeck[cardnum]
 
         pcards.append(card)
 
-        temp.remove(card)
+        userDeck[cardnum] = 0
+
+        userDeck.remove(0)
 
         numLeft -= 1
 
         cardnum = drawCard(numLeft)
 
-        card = temp[cardnum]
+        card = userDeck[cardnum]
 
         dcards.append(card)
 
-        temp.remove(card)
+        userDeck[cardnum] = 0
+
+        userDeck.remove(0)
 
         numLeft -= 1
 
@@ -240,11 +262,13 @@ def main():
 
                     numLeft -= 1
 
-                    card = temp[cardnum]
+                    card = userDeck[cardnum]
 
                     pcards.append(card)
 
-                    temp.remove(card)
+                    userDeck[cardnum] = 0
+
+                    userDeck.remove(0)
 
                     length = len(pcards)
 
@@ -268,11 +292,11 @@ def main():
 
                         numLeft -= 1
 
-                        card = temp[cardnum]
+                        card = userDeck[cardnum]
 
                         dcards.append(card)
 
-                        temp.remove(card)
+                        userDeck.remove(card)
 
                         length = len(dcards)
 
@@ -324,11 +348,80 @@ def main():
 
             print("DEALER WINS")
 
+    else:
 
-num = 1
+        print("Sorry, Invalid Input")
 
-while num == 1:
+def menu():
 
-    main()
+    num = 1
 
-    print("")
+    print("====Welcome to Blackjack!====")
+
+    while num == 1:
+
+        print("")
+
+        print("1) SIngleplayer")
+
+        print("2) Multiplayer")
+
+        print("3) Exit")
+
+        print("")
+
+        try:
+
+            userInput = int(input("Enter an Option: "))
+
+        except:
+
+            userInput = 0
+
+        if userInput == 1:
+
+            try:
+
+                print("")
+
+                decknum = int(input("How many decks should be used?: "))
+
+                if decknum > 0:
+
+                    userDeck = createDeck(decknum)
+
+                    deckLength = len(userDeck)
+
+                    startGame(userDeck, deckLength)
+
+                else:
+
+                    print("")
+
+                    print("The Amount of Decks must be Greater than 0!")
+
+            except:
+
+                print("Sorry, Invalid Input")
+
+        elif userInput == 2:
+
+            print("")
+
+            print("Work in Progress")
+
+        elif userInput == 3:
+
+            num = 0
+
+            print("")
+
+            print("Goodbye!")
+
+        else:
+
+            print("")
+
+            print("Sorry, that is not an option!")
+
+menu()
