@@ -13,14 +13,23 @@ I wrote the code in my free time in order to apply skills I am currently develop
 
 ## What is Included?
 - Card Dealing System Played Against a Bot
+- User Defines Number of Decks Used
 
 ## Future Plans
 - Local Multiplayer
 - Level-Up System(That will transfer progress from Shut the Box)
 - Betting System
-- User Choice on Amount of Decks Used
 
-## Questions?
+## Version History
+
+### v0.1.0
+- Contains the Standard Version of Blackjack with its Core Functionality
+
+### v0.2.0
+- Added Menu Selection
+- Added Ability for User to Decide Number of Decks Used
+
+# Questions?
 If you have an questions, feel free to reach me:
 - curtischase6@gmail.com
 - curtischase6@ku.edu
