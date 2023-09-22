@@ -2,10 +2,10 @@
 Blackjack is a popular casino game played by many.
 The objective of the game is to draw cards that add up to or as close to 21 without going over 21.
 If you obtain a closer number to 21 than the dealer, you win!
-I recreated this game in Python for Singleplayer mode and easier accessability whenever I don't have playing cards on hand
+I recreated this game in Python for Singleplayer mode and easier accessibility whenever I don't have playing cards on hand
 
 ## Motivation
-I wrote the code in my free time in order to apply skills I am currently developing in my studies.
+I wrote the code in my free time in order to apply the skills I am currently developing in my studies.
 
 ## How to Run/Play
 - Download an IDE or have some method to run Python files
@@ -17,7 +17,7 @@ I wrote the code in my free time in order to apply skills I am currently develop
 
 ## Future Plans
 - Local Multiplayer
-- Level-Up System(That will transfer progress from Shut the Box)
+- Level-Up System(That will transfer progress similar to my Shut the Box)
 - Betting System
 
 ## Version History
@@ -27,9 +27,9 @@ I wrote the code in my free time in order to apply skills I am currently develop
 
 ### v0.2.0
 - Added Menu Selection
-- Added Ability for User to Decide Number of Decks Used
+- Added Ability for User to Decide the Number of Decks Used
 
 # Questions?
-If you have an questions, feel free to reach me:
+If you have any questions, feel free to reach me:
 - curtischase6@gmail.com
 - curtischase6@ku.edu
